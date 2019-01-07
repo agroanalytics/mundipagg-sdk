@@ -1,0 +1,236 @@
+--- !ruby/object:Gem::Specification
+name: mundipagg_sdk
+version: !ruby/object:Gem::Version
+  version: 1.4.1
+platform: ruby
+authors:
+- MundiPagg
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2016-11-10 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rest-client
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.8'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.8.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.8'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.8.0
+- !ruby/object:Gem::Dependency
+  name: nori
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.6'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.6.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '2.6'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 2.6.0
+- !ruby/object:Gem::Dependency
+  name: gyoku
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.3'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.3.1
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.3'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.3.1
+- !ruby/object:Gem::Dependency
+  name: nokogiri
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.6'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.6.6.2
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.6'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.6.6.2
+- !ruby/object:Gem::Dependency
+  name: ffi
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.9'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.9.10
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.9'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.9.10
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.10'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.10.6
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '1.10'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 1.10.6
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.3'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.3.0
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '3.3'
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: 3.3.0
+description: Ruby library for integrating with the MundiPagg payment web services
+email: github@mundipagg.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- LICENSE
+- README.md
+- lib/gateway/Address/billing_address.rb
+- lib/gateway/Address/buyer_address.rb
+- lib/gateway/Address/delivery_address.rb
+- lib/gateway/BoletoTransaction/boleto_transaction.rb
+- lib/gateway/BoletoTransaction/boleto_transaction_options.rb
+- lib/gateway/BoletoTransaction/boleto_transaction_report_file.rb
+- lib/gateway/CreditCardTransaction/credit_card.rb
+- lib/gateway/CreditCardTransaction/credit_card_transaction.rb
+- lib/gateway/CreditCardTransaction/credit_card_transaction_options.rb
+- lib/gateway/CreditCardTransaction/credit_card_transaction_report_file.rb
+- lib/gateway/CreditCardTransaction/manage_credit_card_transaction.rb
+- lib/gateway/CreditCardTransaction/retry_sale_credit_card_transaction.rb
+- lib/gateway/Gateway.rb
+- lib/gateway/InstantBuyData/create_instant_buy_data_request.rb
+- lib/gateway/InstantBuyData/update_instant_buy_data_request.rb
+- lib/gateway/Merchant/merchant.rb
+- lib/gateway/OnlineDebit/online_debit_transaction_report_file.rb
+- lib/gateway/Order/order.rb
+- lib/gateway/Order/order_transaction_report_file.rb
+- lib/gateway/Parsers/boleto_transaction_parser.rb
+- lib/gateway/Parsers/credit_card_transaction_parser.rb
+- lib/gateway/Parsers/header_parser.rb
+- lib/gateway/Parsers/online_debit_transaction_parser.rb
+- lib/gateway/Parsers/trailer_parser.rb
+- lib/gateway/Person/buyer.rb
+- lib/gateway/Person/create_buyer_request.rb
+- lib/gateway/Person/person.rb
+- lib/gateway/Recurrency/recurrency.rb
+- lib/gateway/Sale/create_sale_request.rb
+- lib/gateway/Sale/manage_sale_request.rb
+- lib/gateway/Sale/query_sale_request.rb
+- lib/gateway/Sale/request_data.rb
+- lib/gateway/Sale/retry_sale_options.rb
+- lib/gateway/Sale/retry_sale_request.rb
+- lib/gateway/Sale/sale_data.rb
+- lib/gateway/Sale/sale_order_data.rb
+- lib/gateway/SalesOption.rb
+- lib/gateway/ShoppingCart/shopping_cart.rb
+- lib/gateway/ShoppingCart/shopping_cart_item.rb
+- lib/gateway/Trailer.rb
+- lib/gateway/header.rb
+- lib/gateway/post_notification.rb
+- lib/gateway/transaction_report_file.rb
+- lib/mundipagg_sdk.rb
+- mundipagg_sdk.gemspec
+- spec/integration/gateway_spec.rb
+- spec/integration/test_helper.rb
+- spec/spec_helper.rb
+homepage: http://www.mundipagg.com/
+licenses:
+- Apache 2.0
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 2.1.7
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.4.5
+signing_key: 
+specification_version: 4
+summary: MundiPagg Ruby Client Library
+test_files:
+- spec/integration/gateway_spec.rb
+- spec/integration/test_helper.rb
+- spec/spec_helper.rb
